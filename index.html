@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/addon/edit/closebrackets.min.js"></script>
+    
+</head>
+<body>
+    <div class="editor-container">
+        <div class="tabs">
+            <button id="python"><a href="python.html"> Python</a></button>
+            <button id="runCpp">Run C++ </button>
+            <button id="saveCode" onclick="saveCode()">Save Code</button>
+            <button id="clearOutput" onclick="clearOutput()">Clear Output</button>
+
+        </div>
+        <p>HTML</p>
+        <textarea id="html" class="code-editor"></textarea>
+        <p>CSS</p>
+        <textarea id="css" class="code-editor"></textarea>
+        <p>JS</p>
+        <textarea id="js" class="code-editor"></textarea>
+    </div>
+    <div class="btn">
+        <button id="save" onclick="saveCode()">Save Code</button>
+        <button id="clear" onclick="clearOutput()">Clear Output</button>
+    </div>
+
+    <div class="output-container">
+        <iframe id="output"></iframe>
+    </div>
+
+    <!-- coustomized context menu -->
+    <div id="pulse"></div>
+     <div id="contextMenu">
+       <ul>
+         <li>
+           <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+           <div class="name">Open</div>
+         </li>
+         <li class="disabled">
+           <i></i>
+           <div class="name">Open in new tab</div>
+         </li>    
+         <div class="break"></div>
+         <li>
+           <i class="fa fa-scissors" aria-hidden="true"></i>
+           <div class="name">Cut</div>
+         </li>
+         <li>
+           <i class="fa fa-clone" aria-hidden="true"></i>
+           <div class="name">Copy</div>
+         </li>
+         <li>
+           <i class="fa fa-clipboard" aria-hidden="true"></i>
+           <div class="name">Paste</div>
+         </li>
+         <li>
+           <i class="fa fa-document" aria-hidden="true"></i>
+           <div class="name">Format Document</div>
+         </li>
+         <div class="break"></div>
+         <li>
+           <i class="fa fa-refresh" aria-hidden="true"></i>
+           <div class="name">Reload</div>
+         </li>
+         <li>
+           <i class="fa fa-code" aria-hidden="true"></i>
+           <div class="name">Run Code</div>
+         </li>
+         <div class="break"></div>
+         <li class="share">
+           <div class="name">Share</div>
+           <div class="icons">
+             <i class="fa fa-facebook"></i>
+             <i class="fa fa-twitter"></i>
+             <i class="fa fa-instagram"></i>
+             <i class="fa fa-google-plus"></i>
+             <i class="fa fa-pinterest"></i>
+           </div>
+         </li>
+       </ul>
+     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color:#060606;
+}
+.dark-theme{
+    --primary-color: #060606;
+    --secondary-color:white;
+    
+}
+.editor-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #282a36;
+}
+.editor-container textarea{
+    background-color: #060606;
+}
+
+.code-editor{
+    margin: 10px;
+    
+}
+
+.output-container{
+    width: 50%;
+    background: #232631;
+    outline: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* .editor-container #html {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: 1px solid black;
+} */
+.editor-container .tabs{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.editor-container .tabs button{
+    box-shadow: 1px 1px 8px rgb(4, 16, 58);
+    background-color: #2760c2ad;
+    border: 0;
+    outline: 0;
+    padding: 8px 10px;
+    margin: 3% 2% 2% 2%;
+    color: var(--primary-color);
+}
+.editor-container .tabs button a{
+    color: #b3b1b1;
+    text-decoration: none;
+}
+.editor-container textarea{
+    margin: 0;
+}
+
+.editor-container p{
+    width: 100%;
+    background-color: #2D3748;
+    padding: 2%;
+    color: #73D0FF;
+}
+.btn{
+    display: none;
+}
+/* context menu */
+ul li {
+    list-style:none;
+  }
+  #contextMenu {
+    position:absolute;
+    transform-origin:top left;
+    transform:scale(0);
+    width:220px;
+    border:1px solid rgba(100,100,100,0.55);
+    padding:5px;
+    background:#282a36;
+    box-shadow:2px 2px 12px 4px rgba(100,100,100,0.4);
+    transition:transform 400ms ease-in-out 50ms;
+  }
+  #contextMenu.visible {
+    transform:scale(1);
+  }
+  #contextMenu ul li {
+    padding:5px 3px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    color:white;
+    font-size:15px;
+  }
+  #contextMenu ul li:hover {
+    background:rgba(100,100,100,0.12);
+  }
+  #contextMenu ul li.disabled {
+    color:rgba(100,100,100,0.5);
+    cursor:pointer;
+  }
+  #contextMenu ul li.share {
+  /*   height:40px; */
+    width:100%;
+    flex-direction:column;
+    align-items:left;
+    flex-wrap:wrap;
+  }
+  #contextMenu ul li.share > .name {
+    margin-top:-2px;
+    margin-bottom:10px;
+    display:block;
+  }
+  
+  #contextMenu ul li.share .icons {
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+  }
+  #contextMenu ul li.share .icons > i:hover{
+    background:#e7e7e7;
+  }
+  
+  #contextMenu ul li i {
+    width:20px; 
+  }
+  #contextMenu ul li div.name {
+    padding-left:8px;
+  }
+  #contextMenu div.break {
+    margin:4px 0px;
+    border-top:1px solid rgba(100,100,100,0.5);
+  }
+  
+  #pulse {
+    position:fixed;
+    width:35px;
+    height:35px;
+    background:rgba(0,0,0,1);
+    opacity:0;
+    border-radius:50%;
+    z-index:100;
+  }
+  #pulse.active {
+    animation:pulse 400ms ease;
+  }
+
+@media (max-width: 480px){
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+   
+  html,body {
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        width:100vw;
+        height: auto;
+        margin: 0;
+        
+    }
+    .editor-container {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #282a36;
+    }
+    .output-container{
+        width: 100%;
+        background: #232631;
+        outline: 0;
+    }
+    .editor-container .tabs #saveCode{
+        display: none;
+    }
+    .editor-container .tabs #clearOutput{
+        display: none; 
+    }
+    .btn button{
+        box-shadow: 1px 1px 8px rgb(4, 16, 58);
+        background-color: #2760c2ad;
+        border: 0;
+        outline: 0;
+        padding: 8px 10px;
+        margin: 3% 2% 2% 2%;
+        color: var(--primary-color);
+    }
+    .btn{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        background: #232631;
+    }
+
+}
